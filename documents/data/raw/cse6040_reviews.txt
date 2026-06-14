@@ -1,0 +1,14 @@
+Review 1:
+CSE 6040 is one of the most useful courses in the OMSA program. The assignments significantly improved my Python programming skills and helped me become more comfortable working with data.
+
+Review 2:
+The course is very practical. Rather than focusing on theory, students spend most of their time solving computational problems and implementing solutions in Python.
+
+Review 3:
+Students with limited programming experience may initially struggle, but the structure of the course makes it possible to improve steadily throughout the semester.
+
+Review 4:
+The workload is manageable if assignments are started early. Most students report spending consistent time each week rather than dealing with large project spikes.
+
+Review 5:
+Many advanced OMSA courses assume familiarity with Python, making CSE 6040 a valuable foundation course.

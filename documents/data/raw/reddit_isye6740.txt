@@ -1,0 +1,16 @@
+Discussion: Advice for ISYE 6740
+
+User A:
+Review linear algebra before the semester begins. Matrix multiplication, eigenvalues, and vector operations appear throughout the course.
+
+User B:
+The assignments are challenging but rewarding. They require students to understand both theory and implementation.
+
+User C:
+Students who have taken probability and statistics recently generally adjust more quickly to the course material.
+
+User D:
+Machine learning concepts such as clustering, classification, dimensionality reduction, and optimization are covered extensively.
+
+User E:
+Although the course is difficult, many students consider it one of the most valuable technical courses in OMSA.

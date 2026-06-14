@@ -1,0 +1,16 @@
+Thread: Hardest OMSA Courses?
+
+User A:
+In my experience, CSE 6242 and ISYE 6740 were the most difficult courses I have taken in OMSA. CSE 6242 required a large amount of project work and coordination with teammates. The technical requirements were not necessarily impossible, but the volume of work was substantial.
+
+User B:
+ISYE 6740 was challenging because of the mathematical background required. Students without recent experience in linear algebra or probability often struggle during the first few weeks.
+
+User C:
+I would recommend taking ISYE 6501 and CSE 6040 before attempting some of the more advanced courses. Those classes provide a foundation that helps significantly later.
+
+User D:
+Difficulty is very dependent on background. Students with software engineering experience often find CSE 6040 easy but may struggle with the mathematical aspects of machine learning courses.
+
+User E:
+A common recommendation is to balance difficult courses with lighter electives. Taking two high-workload courses simultaneously can lead to burnout.

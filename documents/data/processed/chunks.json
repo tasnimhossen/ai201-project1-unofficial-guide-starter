@@ -1,0 +1,377 @@
+[
+  {
+    "chunk_id": "isye6501_reviews.txt_0",
+    "source_file": "isye6501_reviews.txt",
+    "text": "ISYE 6501 is considered one of the foundational OMSA courses. Students describe it as a broad survey of analytics methods including regression, classi"
+  },
+  {
+    "chunk_id": "isye6501_reviews.txt_1",
+    "source_file": "isye6501_reviews.txt",
+    "text": "s including regression, classification, clustering, and forecasting. Most reviews mention a moderate workload and weekly assignments. Many students re"
+  },
+  {
+    "chunk_id": "isye6501_reviews.txt_2",
+    "source_file": "isye6501_reviews.txt",
+    "text": "assignments. Many students recommend taking this course early in the program because it provides useful exposure to many topics. Students frequently"
+  },
+  {
+    "chunk_id": "isye6501_reviews.txt_3",
+    "source_file": "isye6501_reviews.txt",
+    "text": "y topics. Students frequently note that the course focuses on practical applications rather than deep mathematical derivations. Several reviews mentio"
+  },
+  {
+    "chunk_id": "isye6501_reviews.txt_4",
+    "source_file": "isye6501_reviews.txt",
+    "text": "ations. Several reviews mention that the exams require understanding concepts and interpreting results rather than memorizing formulas."
+  },
+  {
+    "chunk_id": "isye6501_reviews.txt_5",
+    "source_file": "isye6501_reviews.txt",
+    "text": "izing formulas."
+  },
+  {
+    "chunk_id": "simulation_reviews.txt_0",
+    "source_file": "simulation_reviews.txt",
+    "text": "Review 1: Simulation focuses on stochastic systems and decision-making under uncertainty. Review 2: Students learn how to model complex systems and ev"
+  },
+  {
+    "chunk_id": "simulation_reviews.txt_1",
+    "source_file": "simulation_reviews.txt",
+    "text": "o model complex systems and evaluate outcomes using simulation techniques. Review 3: The course workload is generally viewed as moderate relative to o"
+  },
+  {
+    "chunk_id": "simulation_reviews.txt_2",
+    "source_file": "simulation_reviews.txt",
+    "text": "ewed as moderate relative to other advanced OMSA courses. Review 4: Assignments emphasize practical applications rather than abstract theory. Review 5"
+  },
+  {
+    "chunk_id": "simulation_reviews.txt_3",
+    "source_file": "simulation_reviews.txt",
+    "text": "than abstract theory. Review 5: Many students interested in operations research and analytics applications find the course especially valuable."
+  },
+  {
+    "chunk_id": "simulation_reviews.txt_4",
+    "source_file": "simulation_reviews.txt",
+    "text": "se especially valuable."
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_0",
+    "source_file": "cse6242_reviews.txt",
+    "text": "Review 1: CSE 6242 Data and Visual Analytics is frequently described as one of the most demanding OMSA courses. Students mention large team projects,"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_1",
+    "source_file": "cse6242_reviews.txt",
+    "text": "mention large team projects, challenging assignments, and significant time commitments. Many reviews describe the workload as heavy. Several students"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_2",
+    "source_file": "cse6242_reviews.txt",
+    "text": "oad as heavy. Several students recommend taking this course with lighter electives because project deadlines can require many hours of work each week."
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_3",
+    "source_file": "cse6242_reviews.txt",
+    "text": "many hours of work each week. Review 2: Students often comment that the course teaches valuable real-world analytics skills. Team projects require co"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_4",
+    "source_file": "cse6242_reviews.txt",
+    "text": "ills. Team projects require communication, planning, and technical implementation. While the workload can be frustrating, many graduates report using"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_5",
+    "source_file": "cse6242_reviews.txt",
+    "text": ", many graduates report using the skills learned in professional environments after completing the program. Review 3: A common recommendation is to be"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_6",
+    "source_file": "cse6242_reviews.txt",
+    "text": "common recommendation is to begin assignments early. Students who procrastinate often struggle with deadlines because projects involve multiple compon"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_7",
+    "source_file": "cse6242_reviews.txt",
+    "text": "ojects involve multiple components. Reviews frequently emphasize that organization and time management are critical for success. Review 4: Many studen"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_8",
+    "source_file": "cse6242_reviews.txt",
+    "text": "success. Review 4: Many students believe the course is worthwhile despite the difficulty. Topics such as data visualization, analytics workflows, and"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_9",
+    "source_file": "cse6242_reviews.txt",
+    "text": "ion, analytics workflows, and collaborative project development are repeatedly mentioned in reviews. Students often leave the course with a stronger p"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_10",
+    "source_file": "cse6242_reviews.txt",
+    "text": "e the course with a stronger portfolio of practical work. Review 5: Several reviews note that teammates can strongly influence the experience. Strong"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_11",
+    "source_file": "cse6242_reviews.txt",
+    "text": "luence the experience. Strong groups often report positive outcomes while weaker teams may encounter communication challenges. Students consistently r"
+  },
+  {
+    "chunk_id": "cse6242_reviews.txt_12",
+    "source_file": "cse6242_reviews.txt",
+    "text": "enges. Students consistently recommend maintaining regular contact with project partners."
+  },
+  {
+    "chunk_id": "reddit_cse6242.txt_0",
+    "source_file": "reddit_cse6242.txt",
+    "text": "Discussion: Is CSE 6242 Really That Bad? User A: The workload is definitely significant, but I learned more practical skills in this class than in man"
+  },
+  {
+    "chunk_id": "reddit_cse6242.txt_1",
+    "source_file": "reddit_cse6242.txt",
+    "text": "ills in this class than in many other courses. The projects force students to apply concepts rather than simply memorize material. User B: Start assig"
+  },
+  {
+    "chunk_id": "reddit_cse6242.txt_2",
+    "source_file": "reddit_cse6242.txt",
+    "text": "material. User B: Start assignments early. Every semester students underestimate the amount of time required and end up rushing near deadlines. User"
+  },
+  {
+    "chunk_id": "reddit_cse6242.txt_3",
+    "source_file": "reddit_cse6242.txt",
+    "text": "rushing near deadlines. User C: The group project can be a positive or negative experience depending on the team. Communication and project managemen"
+  },
+  {
+    "chunk_id": "reddit_cse6242.txt_4",
+    "source_file": "reddit_cse6242.txt",
+    "text": "nication and project management matter almost as much as technical ability. User D: Although many students complain about the workload, most graduates"
+  },
+  {
+    "chunk_id": "reddit_cse6242.txt_5",
+    "source_file": "reddit_cse6242.txt",
+    "text": "t the workload, most graduates agree that the course provides valuable preparation for industry analytics work. User E: Visualization tools, analytics"
+  },
+  {
+    "chunk_id": "reddit_cse6242.txt_6",
+    "source_file": "reddit_cse6242.txt",
+    "text": "Visualization tools, analytics workflows, and teamwork are the biggest takeaways from the course."
+  },
+  {
+    "chunk_id": "cse6040_reviews.txt_0",
+    "source_file": "cse6040_reviews.txt",
+    "text": "Review 1: CSE 6040 is one of the most useful courses in the OMSA program. The assignments significantly improved my Python programming skills and help"
+  },
+  {
+    "chunk_id": "cse6040_reviews.txt_1",
+    "source_file": "cse6040_reviews.txt",
+    "text": "on programming skills and helped me become more comfortable working with data. Review 2: The course is very practical. Rather than focusing on theory,"
+  },
+  {
+    "chunk_id": "cse6040_reviews.txt_2",
+    "source_file": "cse6040_reviews.txt",
+    "text": "ather than focusing on theory, students spend most of their time solving computational problems and implementing solutions in Python. Review 3: Studen"
+  },
+  {
+    "chunk_id": "cse6040_reviews.txt_3",
+    "source_file": "cse6040_reviews.txt",
+    "text": "ns in Python. Review 3: Students with limited programming experience may initially struggle, but the structure of the course makes it possible to impr"
+  },
+  {
+    "chunk_id": "cse6040_reviews.txt_4",
+    "source_file": "cse6040_reviews.txt",
+    "text": "urse makes it possible to improve steadily throughout the semester. Review 4: The workload is manageable if assignments are started early. Most studen"
+  },
+  {
+    "chunk_id": "cse6040_reviews.txt_5",
+    "source_file": "cse6040_reviews.txt",
+    "text": "are started early. Most students report spending consistent time each week rather than dealing with large project spikes. Review 5: Many advanced OMSA"
+  },
+  {
+    "chunk_id": "cse6040_reviews.txt_6",
+    "source_file": "cse6040_reviews.txt",
+    "text": ". Review 5: Many advanced OMSA courses assume familiarity with Python, making CSE 6040 a valuable foundation course."
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_0",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "Thread: Hardest OMSA Courses? User A: In my experience, CSE 6242 and ISYE 6740 were the most difficult courses I have taken in OMSA. CSE 6242 required"
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_1",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "ken in OMSA. CSE 6242 required a large amount of project work and coordination with teammates. The technical requirements were not necessarily impossi"
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_2",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "s were not necessarily impossible, but the volume of work was substantial. User B: ISYE 6740 was challenging because of the mathematical background re"
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_3",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "the mathematical background required. Students without recent experience in linear algebra or probability often struggle during the first few weeks. U"
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_4",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "during the first few weeks. User C: I would recommend taking ISYE 6501 and CSE 6040 before attempting some of the more advanced courses. Those classe"
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_5",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "advanced courses. Those classes provide a foundation that helps significantly later. User D: Difficulty is very dependent on background. Students with"
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_6",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "t on background. Students with software engineering experience often find CSE 6040 easy but may struggle with the mathematical aspects of machine lear"
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_7",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "atical aspects of machine learning courses. User E: A common recommendation is to balance difficult courses with lighter electives. Taking two high-wo"
+  },
+  {
+    "chunk_id": "reddit_course_difficulty.txt_8",
+    "source_file": "reddit_course_difficulty.txt",
+    "text": "electives. Taking two high-workload courses simultaneously can lead to burnout."
+  },
+  {
+    "chunk_id": "omsa_faq.txt_0",
+    "source_file": "omsa_faq.txt",
+    "text": "Frequently Asked Questions Can students complete OMSA while working full time? Yes. Many students complete the program while maintaining full-time emp"
+  },
+  {
+    "chunk_id": "omsa_faq.txt_1",
+    "source_file": "omsa_faq.txt",
+    "text": "hile maintaining full-time employment. Advisors often recommend starting with one course to understand the workload. How many courses should new stude"
+  },
+  {
+    "chunk_id": "omsa_faq.txt_2",
+    "source_file": "omsa_faq.txt",
+    "text": "many courses should new students take? New students are generally encouraged to begin with a lighter course load. Course difficulty varies significan"
+  },
+  {
+    "chunk_id": "omsa_faq.txt_3",
+    "source_file": "omsa_faq.txt",
+    "text": "e difficulty varies significantly, and time requirements differ across courses. What technical skills are helpful? Programming experience, especially"
+  },
+  {
+    "chunk_id": "omsa_faq.txt_4",
+    "source_file": "omsa_faq.txt",
+    "text": "amming experience, especially in Python, is helpful. Knowledge of probability, statistics, and linear algebra can also improve student success. How lo"
+  },
+  {
+    "chunk_id": "omsa_faq.txt_5",
+    "source_file": "omsa_faq.txt",
+    "text": "mprove student success. How long does the program take? Completion time varies depending on course load. Many students finish in two to four years. Wh"
+  },
+  {
+    "chunk_id": "omsa_faq.txt_6",
+    "source_file": "omsa_faq.txt",
+    "text": "inish in two to four years. What resources are available? Students have access to academic support, advising resources, online discussion forums, and"
+  },
+  {
+    "chunk_id": "omsa_faq.txt_7",
+    "source_file": "omsa_faq.txt",
+    "text": "online discussion forums, and course-specific instructional staff."
+  },
+  {
+    "chunk_id": "omsa_curriculum.txt_0",
+    "source_file": "omsa_curriculum.txt",
+    "text": "The OMSA curriculum consists of foundational courses, advanced analytics courses, and electives. Students are expected to develop skills in programmin"
+  },
+  {
+    "chunk_id": "omsa_curriculum.txt_1",
+    "source_file": "omsa_curriculum.txt",
+    "text": "o develop skills in programming, statistical modeling, optimization, machine learning, and data visualization. Foundational coursework introduces anal"
+  },
+  {
+    "chunk_id": "omsa_curriculum.txt_2",
+    "source_file": "omsa_curriculum.txt",
+    "text": "nal coursework introduces analytics concepts and computational tools. These courses establish the knowledge required for later advanced coursework. Ad"
+  },
+  {
+    "chunk_id": "omsa_curriculum.txt_3",
+    "source_file": "omsa_curriculum.txt",
+    "text": "later advanced coursework. Advanced courses allow students to deepen their understanding of machine learning, simulation, optimization, and large-sca"
+  },
+  {
+    "chunk_id": "omsa_curriculum.txt_4",
+    "source_file": "omsa_curriculum.txt",
+    "text": "n, optimization, and large-scale analytics. Students complete elective coursework based on personal interests and career goals. Popular electives incl"
+  },
+  {
+    "chunk_id": "omsa_curriculum.txt_5",
+    "source_file": "omsa_curriculum.txt",
+    "text": "goals. Popular electives include deep learning, simulation, and machine learning-related topics. The curriculum is designed to balance theoretical kn"
+  },
+  {
+    "chunk_id": "omsa_curriculum.txt_6",
+    "source_file": "omsa_curriculum.txt",
+    "text": "gned to balance theoretical knowledge with practical analytical skills. Many assignments involve applying concepts to realistic datasets and decision-"
+  },
+  {
+    "chunk_id": "omsa_curriculum.txt_7",
+    "source_file": "omsa_curriculum.txt",
+    "text": "alistic datasets and decision-making problems."
+  },
+  {
+    "chunk_id": "isye6740_reviews.txt_0",
+    "source_file": "isye6740_reviews.txt",
+    "text": "Review 1: ISYE 6740 is one of the most mathematically rigorous courses in OMSA. Students should be comfortable with linear algebra and probability con"
+  },
+  {
+    "chunk_id": "isye6740_reviews.txt_1",
+    "source_file": "isye6740_reviews.txt",
+    "text": "ar algebra and probability concepts. Review 2: Assignments require both theoretical understanding and coding implementation. Students must understand"
+  },
+  {
+    "chunk_id": "isye6740_reviews.txt_2",
+    "source_file": "isye6740_reviews.txt",
+    "text": "ion. Students must understand the mathematics behind machine learning algorithms. Review 3: Topics include supervised learning, unsupervised learning,"
+  },
+  {
+    "chunk_id": "isye6740_reviews.txt_3",
+    "source_file": "isye6740_reviews.txt",
+    "text": "arning, unsupervised learning, clustering, classification, dimensionality reduction, and optimization. Review 4: Many students find the course challen"
+  },
+  {
+    "chunk_id": "isye6740_reviews.txt_4",
+    "source_file": "isye6740_reviews.txt",
+    "text": "udents find the course challenging but rewarding. It provides a deeper understanding of machine learning concepts than introductory courses. Review 5:"
+  },
+  {
+    "chunk_id": "isye6740_reviews.txt_5",
+    "source_file": "isye6740_reviews.txt",
+    "text": "ntroductory courses. Review 5: Preparation in mathematics greatly improves the learning experience."
+  },
+  {
+    "chunk_id": "reddit_isye6740.txt_0",
+    "source_file": "reddit_isye6740.txt",
+    "text": "Discussion: Advice for ISYE 6740 User A: Review linear algebra before the semester begins. Matrix multiplication, eigenvalues, and vector operations a"
+  },
+  {
+    "chunk_id": "reddit_isye6740.txt_1",
+    "source_file": "reddit_isye6740.txt",
+    "text": "alues, and vector operations appear throughout the course. User B: The assignments are challenging but rewarding. They require students to understand"
+  },
+  {
+    "chunk_id": "reddit_isye6740.txt_2",
+    "source_file": "reddit_isye6740.txt",
+    "text": "equire students to understand both theory and implementation. User C: Students who have taken probability and statistics recently generally adjust mor"
+  },
+  {
+    "chunk_id": "reddit_isye6740.txt_3",
+    "source_file": "reddit_isye6740.txt",
+    "text": "recently generally adjust more quickly to the course material. User D: Machine learning concepts such as clustering, classification, dimensionality r"
+  },
+  {
+    "chunk_id": "reddit_isye6740.txt_4",
+    "source_file": "reddit_isye6740.txt",
+    "text": "assification, dimensionality reduction, and optimization are covered extensively. User E: Although the course is difficult, many students consider it"
+  },
+  {
+    "chunk_id": "reddit_isye6740.txt_5",
+    "source_file": "reddit_isye6740.txt",
+    "text": "lt, many students consider it one of the most valuable technical courses in OMSA."
+  }
+]

@@ -1,0 +1,9 @@
+The OMSA curriculum consists of foundational courses, advanced analytics courses, and electives. Students are expected to develop skills in programming, statistical modeling, optimization, machine learning, and data visualization.
+
+Foundational coursework introduces analytics concepts and computational tools. These courses establish the knowledge required for later advanced coursework.
+
+Advanced courses allow students to deepen their understanding of machine learning, simulation, optimization, and large-scale analytics.
+
+Students complete elective coursework based on personal interests and career goals. Popular electives include deep learning, simulation, and machine learning-related topics.
+
+The curriculum is designed to balance theoretical knowledge with practical analytical skills. Many assignments involve applying concepts to realistic datasets and decision-making problems.

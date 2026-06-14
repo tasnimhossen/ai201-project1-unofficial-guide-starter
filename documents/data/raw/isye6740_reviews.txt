@@ -1,0 +1,14 @@
+Review 1:
+ISYE 6740 is one of the most mathematically rigorous courses in OMSA. Students should be comfortable with linear algebra and probability concepts.
+
+Review 2:
+Assignments require both theoretical understanding and coding implementation. Students must understand the mathematics behind machine learning algorithms.
+
+Review 3:
+Topics include supervised learning, unsupervised learning, clustering, classification, dimensionality reduction, and optimization.
+
+Review 4:
+Many students find the course challenging but rewarding. It provides a deeper understanding of machine learning concepts than introductory courses.
+
+Review 5:
+Preparation in mathematics greatly improves the learning experience.

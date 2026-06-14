@@ -1,0 +1,21 @@
+Frequently Asked Questions
+
+Can students complete OMSA while working full time?
+
+Yes. Many students complete the program while maintaining full-time employment. Advisors often recommend starting with one course to understand the workload.
+
+How many courses should new students take?
+
+New students are generally encouraged to begin with a lighter course load. Course difficulty varies significantly, and time requirements differ across courses.
+
+What technical skills are helpful?
+
+Programming experience, especially in Python, is helpful. Knowledge of probability, statistics, and linear algebra can also improve student success.
+
+How long does the program take?
+
+Completion time varies depending on course load. Many students finish in two to four years.
+
+What resources are available?
+
+Students have access to academic support, advising resources, online discussion forums, and course-specific instructional staff.

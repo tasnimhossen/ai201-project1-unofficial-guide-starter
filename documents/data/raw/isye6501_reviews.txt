@@ -1,0 +1,3 @@
+ISYE 6501 is considered one of the foundational OMSA courses. Students describe it as a broad survey of analytics methods including regression, classification, clustering, and forecasting. Most reviews mention a moderate workload and weekly assignments. Many students recommend taking this course early in the program because it provides useful exposure to many topics.
+
+Students frequently note that the course focuses on practical applications rather than deep mathematical derivations. Several reviews mention that the exams require understanding concepts and interpreting results rather than memorizing formulas.
