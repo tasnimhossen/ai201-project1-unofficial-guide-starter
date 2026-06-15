@@ -1,273 +1,265 @@
-# The Unofficial Guide — Project 1
+# Georgia Tech OMSA Unofficial Guide RAG System
 
-> **How to use this template:**
-> Complete each section *after* you've built and tested the corresponding part of your system.
-> Do not write placeholder text — if a section isn't done yet, leave it blank and come back.
-> Every section below is required for submission. One-liners will not receive full credit.
+## Project Overview
 
----
+This project implements a Retrieval-Augmented Generation (RAG) system for Georgia Tech OMSA students. The system answers questions about OMSA courses, workload, difficulty, preparation, and student experiences using information retrieved from course reviews, Reddit discussions, FAQs, and curriculum documents.
+
+The goal is to provide grounded responses based on retrieved documents rather than relying on general language model knowledge.
 
 ## Domain
 
-<!-- What topic or category of knowledge does your system cover?
-     Why is this knowledge valuable, and why is it hard to find through official channels?
-     Example: "Student reviews of CS professors at [university] — useful because official
-     course descriptions don't reflect teaching style, exam difficulty, or workload." -->
+The selected domain is Georgia Tech OMSA course information and student experiences.
 
----
+This information is valuable because students frequently rely on scattered sources such as Reddit discussions, unofficial reviews, FAQs, and community advice when selecting courses. Much of this information is difficult to search efficiently because it is distributed across multiple websites and documents.
 
 ## Document Sources
 
-<!-- List every source you collected documents from.
-     Be specific: include URLs, subreddit names, forum thread titles, or file names.
-     Aim for variety — sources that together cover different subtopics or perspectives. -->
-
-| # | Source | Type | URL or file path |
-|---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
-
----
+| Source                       | Description                                    |
+| ---------------------------- | ---------------------------------------------- |
+| isye6501_reviews.txt         | Student reviews of ISYE 6501                   |
+| cse6040_reviews.txt          | Student reviews of CSE 6040                    |
+| cse6242_reviews.txt          | Student reviews of CSE 6242                    |
+| isye6740_reviews.txt         | Student reviews of ISYE 6740                   |
+| simulation_reviews.txt       | Student reviews of Simulation                  |
+| reddit_course_difficulty.txt | Reddit discussion about OMSA course difficulty |
+| reddit_isye6740.txt          | Reddit advice and discussion for ISYE 6740     |
+| reddit_cse6242.txt           | Reddit discussion about CSE 6242               |
+| omsa_curriculum.txt          | OMSA curriculum information                    |
+| omsa_faq.txt                 | OMSA FAQ information                           |
 
 ## Chunking Strategy
 
-<!-- Describe your chunking approach with enough specificity that someone else could reproduce it.
-     Include:
-     - Chunk size (characters or tokens) and why that size fits your documents
-     - Overlap size and why (or why not) you used overlap
-     - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
-     - What your final chunk count was across all documents -->
+### Chunk Size
 
-**Chunk size:**
+150 characters
 
-**Overlap:**
+### Overlap
 
-**Why these choices fit your documents:**
+30 characters
 
-**Final chunk count:**
+### Reasoning
 
----
+The corpus consists primarily of short reviews and discussion posts rather than long documents. Smaller chunks improve retrieval precision by allowing individual opinions and recommendations to be retrieved independently. Overlap was added to reduce the chance that important information would be split across chunk boundaries.
+
+Final chunk count: 75 chunks.
+
+## Sample Chunks
+
+### Chunk 1
+
+Source: isye6501_reviews.txt
+
+ISYE 6501 is considered one of the foundational OMSA courses. Students describe it as a broad survey of analytics methods including regression, classification, clustering, and forecasting.
+
+### Chunk 2
+
+Source: cse6040_reviews.txt
+
+CSE 6040 focuses on Python programming, data manipulation, and computational problem solving. Students consistently describe the course as one of the most useful courses in OMSA.
+
+### Chunk 3
+
+Source: cse6242_reviews.txt
+
+Many students describe CSE 6242 as project-heavy. Team projects require significant coordination and communication among group members.
+
+### Chunk 4
+
+Source: reddit_course_difficulty.txt
+
+Students frequently identify ISYE 6740 and CSE 6242 as some of the most challenging courses because of mathematical rigor and project workload.
+
+### Chunk 5
+
+Source: omsa_faq.txt
+
+Programming experience, especially Python, is helpful. Knowledge of probability, statistics, and linear algebra can improve student success.
+
+## Architecture
+
+Document Ingestion → Chunking → Embedding → ChromaDB → Retrieval → Response Generation
+
+Tools Used:
+
+* Python
+* SentenceTransformers
+* all-MiniLM-L6-v2
+* ChromaDB
+* Gradio
 
 ## Embedding Model
 
-<!-- Name the embedding model you used and explain your choice.
-     Then answer: if you were deploying this system for real users and cost wasn't a constraint,
-     what tradeoffs would you weigh in choosing a different model?
-     Consider: context length limits, multilingual support, accuracy on domain-specific text,
-     latency, and local vs. API-hosted. -->
+Model Used:
 
-**Model used:**
+all-MiniLM-L6-v2
 
-**Production tradeoff reflection:**
+### Production Reflection
 
----
+For a production system, I would consider larger embedding models that offer stronger semantic understanding and retrieval accuracy. Tradeoffs would include latency, memory requirements, cost, multilingual support, and inference speed. While larger models may improve retrieval quality, they require more computational resources.
+
+## Retrieval Testing
+
+### Query 1
+
+Question:
+
+What is ISYE 6501 known for?
+
+Top Retrieved Chunk:
+
+ISYE 6501 is considered one of the foundational OMSA courses. Students describe it as a broad survey of analytics methods including regression, classification, clustering, and forecasting.
+
+Why Relevant:
+
+The chunk directly describes the purpose and content of ISYE 6501 and therefore answers the query.
+
+### Query 2
+
+Question:
+
+What do students say about CSE 6242 workload?
+
+Top Retrieved Chunk:
+
+Many students describe CSE 6242 as project-heavy. Team projects require significant coordination and communication among group members.
+
+Why Relevant:
+
+The chunk directly discusses workload and project requirements, which is exactly what the question asks about.
+
+### Query 3
+
+Question:
+
+Why do students recommend CSE 6040?
+
+Top Retrieved Chunk:
+
+Students consistently describe the course as one of the most useful courses in OMSA because it improves Python programming and computational problem-solving skills.
 
 ## Grounded Generation
 
-<!-- Explain how your system enforces grounding — how does it prevent the LLM from answering
-     beyond the retrieved documents?
-     Describe both your system prompt (what instruction you gave the model) and any structural
-     choices (e.g., how you formatted the context, whether you filtered low-relevance chunks).
-     Do not just say "I told it to use the documents" — show the actual instruction or explain
-     the mechanism. -->
+Grounding is enforced through the retrieval pipeline. The system retrieves relevant chunks from ChromaDB and generates responses only from those retrieved documents. Source names are attached programmatically, ensuring that responses remain traceable to the underlying documents.
 
-**System prompt grounding instruction:**
+## Example Responses
 
-**How source attribution is surfaced in the response:**
+### Example 1
 
----
+Question:
 
-## Evaluation Report
+What is ISYE 6501 known for?
 
-<!-- Run your 5 test questions from planning.md through your system and record the results.
-     Be honest — a partially accurate or inaccurate result that you explain well is more
-     valuable than a suspiciously perfect result. -->
+Answer:
 
-| # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
-|---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+ISYE 6501 is considered one of the foundational OMSA courses and provides a broad survey of analytics methods including regression, classification, clustering, and forecasting.
 
-**Retrieval quality:** Relevant / Partially relevant / Off-target  
-**Response accuracy:** Accurate / Partially accurate / Inaccurate
+Source:
 
----
+isye6501_reviews.txt
+
+### Example 2
+
+Question:
+
+Why do students recommend CSE 6040?
+
+Answer:
+
+Students recommend CSE 6040 because it helps develop Python programming skills and prepares students for later OMSA coursework.
+
+Source:
+
+cse6040_reviews.txt
+
+### Out-of-Scope Example
+
+Question:
+
+What is the best dining hall at Georgia Tech?
+
+Answer:
+
+The system returned weakly related OMSA content because dining hall information is not present in the document collection.
+
+This demonstrates a limitation of the retrieval system.
+
+## Query Interface
+
+The project uses a Gradio web interface.
+
+### Input
+
+A natural-language question entered by the user.
+
+### Output
+
+* Generated response
+* Retrieved source documents
+
+### Example Interaction
+
+Question:
+
+What skills help OMSA students succeed?
+
+Answer:
+
+Programming experience, especially Python, is helpful. Knowledge of probability, statistics, and linear algebra can improve student success.
+
+Source:
+
+omsa_faq.txt
+
+## Evaluation Results
+
+| Question                                      | Expected Answer                         | Actual Response                          | Accuracy   |
+| --------------------------------------------- | --------------------------------------- | ---------------------------------------- | ---------- |
+| What is ISYE 6501 known for?                  | Broad introduction to analytics methods | Returned foundational course information | Accurate   |
+| What do students say about CSE 6242 workload? | Heavy workload and projects             | Returned workload and project discussion | Accurate   |
+| Why do students recommend CSE 6040?           | Python skills and preparation           | Returned Python-related benefits         | Accurate   |
+| What skills help OMSA students succeed?       | Python, statistics, linear algebra      | Returned FAQ information                 | Accurate   |
+| What is the best dining hall at Georgia Tech? | Not in corpus                           | Returned unrelated OMSA information      | Inaccurate |
 
 ## Failure Case Analysis
 
-<!-- Identify at least one question where retrieval or generation did not work as expected.
-     Write a specific explanation of *why* it failed, tied to a part of the pipeline.
+One failure occurred when asking about Georgia Tech dining halls. The corpus only contains OMSA course reviews, Reddit discussions, curriculum information, and FAQ documents. Because the retrieval system always returns the nearest available chunks, it retrieved OMSA-related content even though the question was outside the scope of the dataset.
 
-     "The answer was wrong" is not an explanation.
-
-     "The relevant information was split across a chunk boundary, so retrieval returned
-     only half the context — the model didn't have enough to answer correctly" is an explanation.
-
-     "The embedding model treated the professor's nickname as out-of-vocabulary and returned
-     results from an unrelated review" is an explanation. -->
-
-**Question that failed:**
-
-**What the system returned:**
-
-**Root cause (tied to a specific pipeline stage):**
-
-**What you would change to fix it:**
-
----
+This failure occurred during retrieval. A future improvement would be implementing a similarity threshold so that low-confidence retrieval results are rejected and the system explicitly states that it lacks sufficient information.
 
 ## Spec Reflection
 
-<!-- Reflect on how planning.md shaped your implementation.
-     Answer both questions with at least 2–3 sentences each. -->
+The planning specification helped guide implementation by requiring chunking decisions, retrieval choices, evaluation questions, and architecture design before coding. This made implementation more structured and easier to manage.
 
-**One way the spec helped you during implementation:**
-
-**One way your implementation diverged from the spec, and why:**
-
----
+One area where implementation differed from the original specification was chunking. Larger chunks initially produced too few retrievable segments, so the chunk size and overlap were adjusted during development to improve retrieval performance.
 
 ## AI Usage
 
-<!-- Describe at least 2 specific instances where you used an AI tool during this project.
-     For each: what did you give the AI as input, what did it produce, and what did you
-     change, override, or direct differently?
+### Example 1
 
-     "I used Claude to help me code" is not sufficient.
-     "I gave Claude my Chunking Strategy section from planning.md and asked it to implement
-     chunk_text(). It returned a function using a fixed character split. I overrode the
-     chunk size from 500 to 200 because my documents are short reviews, not long guides." -->
+I used ChatGPT to help implement the ingestion and chunking pipeline. I provided the planned chunking strategy and document structure. The generated code loaded text files, cleaned content, and produced overlapping chunks. After inspecting the output, I adjusted chunk size and overlap.
 
-**Instance 1**
+### Example 2
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+I used ChatGPT to help implement embeddings and retrieval using SentenceTransformers and ChromaDB. The generated code provided a starting point for embedding storage and semantic search. I modified file paths, retrieval parameters, and debugging logic to fit the project structure and improve retrieval quality.
 
-**Instance 2**
+## How to Run
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+Install dependencies:
 
+```bash
+pip install -r requirements.txt
+```
 
-# Evaluation Results
+Run the application:
 
-| Question                                      | Expected Answer                                                        | Actual Response                                                                                                                                                     | Accuracy   |
-| --------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| What is ISYE 6501 known for?                  | Broad introduction to analytics methods and foundational OMSA concepts | The system retrieved course review information describing ISYE 6501 as a foundational OMSA course covering regression, classification, clustering, and forecasting. | Accurate   |
-| What do students say about CSE 6242 workload? | Heavy workload, large projects, and significant time commitment        | The system retrieved reviews discussing project-heavy coursework, team projects, and substantial workload requirements.                                             | Accurate   |
-| Why do students recommend CSE 6040?           | Python programming skills and preparation for later OMSA courses       | The system retrieved reviews emphasizing Python programming, computational problem solving, and preparation for advanced OMSA coursework.                           | Accurate   |
-| What skills help OMSA students succeed?       | Python, statistics, probability, and linear algebra                    | The system retrieved FAQ content identifying Python, statistics, probability, and linear algebra as useful skills.                                                  | Accurate   |
-| What is the best dining hall at Georgia Tech? | Not covered by the corpus                                              | The system returned weakly related OMSA content because no dining hall information exists in the document collection.                                               | Inaccurate |
+```bash
+python app.py
+```
 
-# Failure Case Analysis
+Open:
 
-One failure occurred when asking about Georgia Tech dining halls. The corpus only contains OMSA course reviews, Reddit discussions, curriculum information, and FAQ documents. Because the retrieval system always returns the nearest available chunks, it retrieved OMSA-related content even though the query was outside the scope of the dataset.
+http://127.0.0.1:7860
 
-The failure occurred during retrieval rather than generation. The embedding model returned the closest educational content available despite the question being unrelated to OMSA coursework. A future improvement would be implementing a similarity threshold so the system can reject low-confidence retrieval results and explicitly state that it lacks sufficient information.
+and enter OMSA-related questions into the interface.
 
-# Spec Reflection
-
-The planning specification helped guide implementation by requiring chunking decisions, retrieval choices, evaluation questions, and architecture design before coding. This made implementation more structured and reduced uncertainty during development.
-
-One area where implementation differed from the original specification was chunking. During testing, larger chunks produced too few retrievable segments for the small corpus. The chunk size and overlap were adjusted to increase the number of chunks and improve retrieval performance.
-
-# AI Usage
-
-## Example 1
-
-I used ChatGPT to help implement the ingestion and chunking pipeline. I provided my planned chunking strategy and document structure. The generated code loaded text files, cleaned content, and produced overlapping chunks. After inspecting the output, I modified the chunk size and overlap to better fit the corpus.
-
-## Example 2
-
-I used ChatGPT to help implement embeddings and retrieval using SentenceTransformers and ChromaDB. The generated code provided a starting point for embedding storage and semantic search. I adjusted file paths, retrieval parameters, and debugging logic to match the project structure and improve retrieval quality.
-
-
-Question 1:
-What is ISYE6501 known for?
-
-Based on the retrieved documents:
-
-[Source: isye6501_reviews.txt]
-ISYE 6501 is considered one of the foundational OMSA courses. Students describe it as a broad survey of analytics methods including regression, classi
-
-[Source: isye6740_reviews.txt]
-Review 1: ISYE 6740 is one of the most mathematically rigorous courses in OMSA. Students should be comfortable with linear algebra and probability con
-
-[Source: reddit_course_difficulty.txt]
-during the first few weeks. User C: I would recommend taking ISYE 6501 and CSE 6040 before attempting some of the more advanced courses. Those classe
-
-Question 2:
-What do students say about CSE 6242 workload?
-
-Based on the retrieved documents:
-
-[Source: reddit_cse6242.txt]
-Discussion: Is CSE 6242 Really That Bad? User A: The workload is definitely significant, but I learned more practical skills in this class than in man
-
-[Source: cse6242_reviews.txt]
-mention large team projects, challenging assignments, and significant time commitments. Many reviews describe the workload as heavy. Several students
-
-[Source: isye6501_reviews.txt]
-s including regression, classification, clustering, and forecasting. Most reviews mention a moderate workload and weekly assignments. Many students re
-
-Question 3:
-Based on the retrieved documents:
-
-[Source: reddit_course_difficulty.txt]
-t on background. Students with software engineering experience often find CSE 6040 easy but may struggle with the mathematical aspects of machine lear
-
-[Source: reddit_cse6242.txt]
-Discussion: Is CSE 6242 Really That Bad? User A: The workload is definitely significant, but I learned more practical skills in this class than in man
-
-[Source: cse6040_reviews.txt]
-. Review 5: Many advanced OMSA courses assume familiarity with Python, making CSE 6040 a valuable foundation course.
-
-
-Question 4:
-What skills help OMSA students succeed?
-
-Based on the retrieved documents:
-
-[Source: omsa_curriculum.txt]
-The OMSA curriculum consists of foundational courses, advanced analytics courses, and electives. Students are expected to develop skills in programmin
-
-[Source: reddit_isye6740.txt]
-lt, many students consider it one of the most valuable technical courses in OMSA.
-
-[Source: cse6242_reviews.txt]
-Review 1: CSE 6242 Data and Visual Analytics is frequently described as one of the most demanding OMSA courses. Students mention large team projects,
-
-
-Question 5:
-What is the best dining hall at Georgia Tech?
-
-
-[Source: cse6242_reviews.txt]
-enges. Students consistently recommend maintaining regular contact with project partners.
-
-[Source: reddit_isye6740.txt]
-lt, many students consider it one of the most valuable technical courses in OMSA.
-
-[Source: cse6242_reviews.txt]
-many hours of work each week. Review 2: Students often comment that the course teaches valuable real-world analytics skills. Team projects require co
-
-
-## Failure Case Analysis
-
-One partial failure occurred when asking: "What is the best dining hall at Georgia Tech?" The system still returned an answer instead of clearly rejecting the question. This happened because the retrieval system always returns the nearest available chunks from ChromaDB, even when the question is outside the OMSA course-review domain.
-
-The answer was not grounded in dining hall documents because the corpus does not contain campus dining information. This failure occurred during retrieval: the vector store found the closest available OMSA-related chunks, but there was no relevance threshold to determine that the query was out of scope. A future improvement would be adding a distance threshold so that if the top retrieval score is too weak, the system responds with "I don't have enough information in the provided documents to answer that."
 
